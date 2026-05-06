@@ -1,0 +1,25 @@
+{
+  "ceremony_info": {
+    "video": "26020113.mp4",
+    "date": "2026-03-10T16:17:57.408337",
+    "total_frames": 280,
+    "total_turns": 2,
+    "duration_seconds": 9.33,
+    "fps": 30.0,
+    "ai_model": "OpenAI ChatGPT"
+  },
+  "dialogue": [
+    {
+      "turn": 1,
+      "frame": 1,
+      "timestamp_sec": 0.03,
+      "ai_response": "【AI sees】\n在空中劃出優雅的弧線，像一隻展翅的天鵝，身體的每一寸都展現出高足弓的力量與流暢，瞬間的轉折如同流星劃過夜空的美麗瞬間。  \n【AI says】\n願你的每一次旋轉都能引領你邁向無限的可能，是否感受到了靈魂在舞蹈中自由翱翔的喜悅呢？"
+    },
+    {
+      "turn": 2,
+      "frame": 117,
+      "timestamp_sec": 3.9,
+      "ai_response": "【AI sees】\n如同破曉的晨光，舞者在舞台上進行著令人屏息的 fouetté，旋轉的瞬間閃耀著力量與優雅，恍若在胡桃夾子的夢幻世界中飛翔。  \n【AI says】\n在這旋轉的交響中，願你記得，每一次的努力都是通往舞台之巔的台階，你是否感受到那股無形的力量正在指引著你呢？"
+    }
+  ]
+}
