@@ -4,9 +4,7 @@
 
 ---
 
-## 專案功能總覽
-
-本程式主要包含以下功能：
+## 功能總覽
 
 - 載入 Dome 3D 模型 `dome3.obj`
 - 產生彩帶式 LED 路徑 `ribbonPath`
@@ -14,9 +12,9 @@
 - 支援多種燈光參數控制
 - 支援單段燈光發射與個別編輯
 - 支援文字 / 數字輸入轉成跑燈效果
-- 支援 AI says 內容轉成代碼，再轉成摩斯密碼燈光
+- 支援 AI says 文字內容轉成代碼，並轉成摩斯密碼，再轉成燈光
 - 支援麥克風音量觸發燈光
-- 支援 3D 模型 edge id / pixel id / node id 標記
+- 支援 3D 模型 pixel id / node id 標記
 - 支援平面視圖與像素排列圖
 - 支援 Art-Net 輸出至 H807SA LED 控制器
 - 可用於實體 LED 裝置測試與展示
@@ -55,7 +53,7 @@ Dome_LED_Interactive_Control_System/
 
 ## 開發環境
 
-本專案使用 Processing 開發，建議使用 Processing 4。
+使用 Processing 開發，建議使用 Processing 4。
 
 需要安裝或啟用的 Library：
 
@@ -99,7 +97,7 @@ import java.net.*;
 ```text
 Dome 3D 模型
 ↓
-建立 edge / vertex / ribbonPath
+建立 vertex / ribbonPath
 ↓
 選擇 LED 顯示模式：彩帶形式或節點形式
 ↓
@@ -147,7 +145,7 @@ H807SA 控制器
 - 更新麥克風輸入與麥克風燈效
 - 根據目前 LED 模式繪製 LED
 - 顯示 AI says / 轉譯代碼
-- 顯示 edge label / pixel label / node label
+- 顯示 pixel label / node label
 - 繪製平面視圖與像素排列圖
 - 繪製 UI
 - 透過 Art-Net 傳送 LED 資料到 H807SA
@@ -156,11 +154,10 @@ H807SA 控制器
 
 ## 2. LED 顯示模式
 
-程式目前支援三種 LED 排列模式：
+程式目前支援兩種 LED 排列模式：
 
 | 模式 | 常數 | 說明 |
 |---|---|---|
-| Edge | `LAYOUT_EDGE` | 依照模型邊線 id 放置 LED |
 | Ribbon | `LAYOUT_RIBBON` | 使用彩帶式路徑 `ribbonPath` 顯示 LED |
 | Vertex | `LAYOUT_VERTEX` | 使用模型節點 `orderedMeshNodes` 顯示 LED |
 
@@ -175,8 +172,7 @@ H807SA 控制器
 
 ## 3. 彩帶式 LED 路徑
 
-彩帶路徑是本專案的核心之一。  
-程式會根據 Dome 的球心 `sphereC` 與半徑 `sphereR`，建立一條在 Dome 內部 / 表面附近旋轉上升的彩帶路徑。
+彩帶路徑是本專案的核心。程式會根據 Dome 的球心 `sphereC` 與半徑 `sphereR`，建立一條在 Dome 內部 / 表面附近旋轉上升的彩帶路徑。
 
 主要資料結構：
 
@@ -232,7 +228,7 @@ bezier3(p0, p1, p2, p3, t);
 
 ## 5. 彩帶厚度與貼球面顯示
 
-彩帶不是只畫一條單線，而是會將每個中心點展開成多列 LED，形成有寬度的彩帶。
+彩帶將每個中心點展開成多列 LED，形成有寬度的彩帶。
 
 主要參數：
 
@@ -255,7 +251,7 @@ drawSpiralLEDs();
 
 ## 6. 節點式 LED 模式
 
-除了彩帶路徑外，程式也能直接抓取 OBJ 模型的 vertex，整理成節點式 LED 序列。
+程式抓取 OBJ 模型的 vertex，整理成節點式 LED 序列。
 
 流程如下：
 
@@ -279,7 +275,7 @@ drawMeshNodeLEDs()
 最後形成 orderedMeshNodes
 ```
 
-這讓節點式 LED 可以沿著 Dome 結構有順序地播放跑燈、波浪或麥克風效果。
+讓節點式 LED 可以沿著 Dome 結構有順序地播放跑燈、波浪或麥克風效果。
 
 ---
 
@@ -332,7 +328,6 @@ UI 中提供多個燈光參數：
 | `moveSpeed` | 圖樣移動速度 |
 | `oscAxis` | 作用軸：序列 / 左右 / 上下 |
 | `oscDir` | 移動方向 |
-| `oscShape` | 波形：柔和 / 尖銳 / 脈衝 |
 
 這些參數會影響圖樣遮罩與閃爍方式。
 
@@ -460,7 +455,7 @@ evalMicShotV();
 
 ## 12. Art-Net / H807SA 輸出
 
-本專案可將 Processing 中的燈效輸出到 H807SA 控制器。
+將 Processing 中的燈效輸出到 H807SA 控制器。
 
 預設設定：
 
@@ -514,7 +509,7 @@ sendArtNetUniverse();
 
 ### 平面視圖
 
-將 3D Dome 上的彩帶 LED 攤平成經緯度形式，方便觀察整體走線。
+將 3D Dome 上的彩帶 LED 攤平成經緯度形式。
 
 ```java
 renderFlatViewRibbon();
@@ -522,7 +517,7 @@ renderFlatViewRibbon();
 
 ### 像素排列圖
 
-依照指定 rowStart / rowEnd，將 765 個 pixel 排成施工或對照用的像素圖。
+依照指定 rowStart / rowEnd，將 765 個 pixel 排成對照用的像素圖。
 
 ```java
 renderPixelMapView();
@@ -678,13 +673,7 @@ int virtualI = int(map(
 1. 執行前請確認 `dome3.obj` 放在 `data/` 資料夾。
 2. 使用 AI says / 摩斯功能時，請確認 `ceremony.json` 放在 `data/` 資料夾。
 3. 若要輸出到 H807SA，請確認電腦與控制器在同一網段。
-4. 若 H807SA IP 不同，請修改：
-
-```java
-String h807IpStr = "192.168.1.10";
-```
-
-5. 如果實體燈條顏色錯位，請檢查 Art-Net 輸出中的 RGB 色序：
+4. 如果實體燈條顏色錯位，請檢查 Art-Net 輸出中的 RGB 色序：
 
 ```java
 packet[idx++] = (byte)r;
@@ -693,36 +682,3 @@ packet[idx++] = (byte)b;
 ```
 
 常見可能需要改成 `GRB` 或其他色序。
-
----
-
-## 18. 專案用途
-
-此專案可用於：
-
-- Dome LED 裝置設計
-- 國科會計畫燈光展示
-- 彩帶式 LED 路徑模擬
-- LED pixel 編號與施工對位
-- 節點式燈光測試
-- 麥克風互動燈光
-- 文字 / 摩斯密碼燈光轉譯
-- Art-Net / H807SA 實體 LED 輸出
-- 給老師、學弟妹或廠商理解系統邏輯
-
----
-
-## 備註
-
-目前此版本已整合多種互動與輸出功能，建議 GitHub 上可以將每個功能拆成獨立 `.pde` 分頁，方便後續維護。
-
-如果後續要交接給學弟妹，建議優先理解以下順序：
-
-```text
-1. 主程式 setup() / draw()
-2. ribbonPath 如何生成
-3. evalPixelV() 如何計算亮度
-4. UI 如何控制參數
-5. countRun / editableShot 如何發射燈段
-6. Art-Net 如何輸出到 H807SA
-```
