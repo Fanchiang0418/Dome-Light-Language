@@ -274,7 +274,7 @@ drawMeshNodeLEDs()
 最後形成 orderedMeshNodes
 ```
 
-讓節點式 LED 可以沿著 Dome 結構有順序地播放跑燈、波浪或麥克風效果。
+讓節點式 LED 可以沿著 Dome 結構有順序地播放燈光效果。
 
 ---
 
