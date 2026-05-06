@@ -33,17 +33,16 @@ Dome_LED_Interactive_Control_System
 
 ```text
 Dome_LED_Interactive_Control_System/
-├── README.md
 ├── Dome_LED_Interactive_Control_System.pde
-├── ArtNet_H807SA_Output.pde
-├── RibbonPath_Generator.pde
-├── UI_Controls.pde
-├── Brightness_System.pde
-├── Keyboard_Controls.pde
-├── Preview_Views.pde
-├── RunShot_System.pde
-├── Morse_AI_System.pde
-├── Geometry_And_Labels.pde
+├── aiSays.pde
+├── buildSpiralsOnSphere.pde
+├── callBack.pde
+├── collectEdgesRecursive.pde
+├── collectSpiralDotsByColumns.pde
+├── computeBoundsFromEdges.pde
+├── drawEdgeLabels.pde
+├── drawFxHUD.pde
+├── drawHoverTooltip.pde
 └── data/
     ├── dome3.obj
     └── ceremony.json
