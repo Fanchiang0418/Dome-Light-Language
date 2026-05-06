@@ -6,7 +6,11 @@ Google Drive
 [實作檔案] 檔案總整理：[實作連結](https://docs.google.com/document/d/13akpmVUNkJLWO78cIQ2tOAPk_lKGhlwTNGqt1iJp55Y/edit?tab=t.0)
 
 GitHub
-- [期中總結]：2025_Dance_Dialogue
-    - 備註：readme.md 檔案，內含步驟及需準備的資料
-
-
+- [前期測試]：[Language-to-Light-Mapping](https://github.com/Fanchiang0418/LanguageToLightMappingSystem)
+    - 備註：內含步驟及需準備的資料
+- [期中總結]：[Light-simulation](https://github.com/Fanchiang0418/Light-simulation/tree/main)
+    - 備註：內含步驟及需準備的資料
+- [Dome 燈光排列與控制]：[Dome-Light-Language](https://github.com/Fanchiang0418/Dome-Light-Language/tree/main/20260303_to_20260505_Code)
+    - 備註：內含步驟及需準備的資料
+影片
+- 皆在簡報中 (對應日期找尋即可)
