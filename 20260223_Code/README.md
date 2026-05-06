@@ -58,8 +58,7 @@ Dome_LED_RibbonPath_FX.pde
 
 ### 1. 建立模型邊線資料
 
-程式會將整個 `PShape` 模型中的線段邊抽出來，並存成 `Edge(a, b, id)`。  
-每一條邊都會得到一個固定的 `edge id`，方便在畫面上標記、hover 與點選。
+程式會將整個 `PShape` 模型中的線段邊抽出來，並存成 `Edge(a, b, id)`。每一條邊都會得到一個固定的 `edge id`，方便在畫面上標記、hover 與點選。
 
 主要相關函式：
 
@@ -71,8 +70,7 @@ collectEdgesRecursive(model, allEdges);
 
 ### 2. 計算 Dome 的球心與半徑
 
-程式會根據所有邊線端點計算出模型的最小座標與最大座標，形成 bounding box。  
-再使用 bounding box 估算 Dome 的球心 `sphereC` 與水平半徑 `sphereR`。
+程式會根據所有邊線端點計算出模型的最小座標與最大座標，形成 bounding box。再使用 bounding box 估算 Dome 的球心 `sphereC` 與水平半徑 `sphereR`。
 
 主要相關函式：
 
