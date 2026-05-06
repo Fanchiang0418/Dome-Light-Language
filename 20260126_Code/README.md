@@ -1,19 +1,19 @@
 # Dome LED Light Simulation
 
 本專案為 Dome 結構燈光模擬與 LED 控制邏輯測試工具，使用 Processing 製作。  
-主要用於國科會計畫中，測試 Dome 結構上的 LED 燈條配置、燈光排列方式、燈光動畫語言，以及模型邊線與 LED 點位的對應關係。
+測試 Dome 結構上的 LED 燈條配置、燈光排列方式、燈光動畫語言，以及模型邊線與 LED 點位的對應關係。
 
 本專案目前包含兩支主要程式：
 
-1. `Dome_LED_EdgeMapping.pde`  
+1. `Dome_LED_Control`  
    用於讀取 Dome 3D 模型、顯示模型邊線 ID，並將 LED 點位對應到指定模型邊線上。
 
-2. `Dome_LED_LightingSimulation_BGModel.pde`  
+2. `Dome_LED_LightingSimulation_withBackgroundModel`  
    用於模擬不同燈光排列形式、燈光動畫效果，以及將背景 Dome 模型與燈光位置進行視覺對位。
 
 ---
 
-## 1. Dome_LED_EdgeMapping.pde
+## 1. Dome_LED_Control
 
 ### 功能說明
 
@@ -46,14 +46,9 @@
 | `L` | 顯示或隱藏邊線標籤 |
 | `+` / `-` | 調整標籤顯示密度 |
 
-### 使用情境
-
-這支程式適合用於實際製作前的 LED 位置確認。  
-當需要把 LED 燈條安裝在 Dome 結構的特定邊線上時，可以先透過此程式確認模型中的邊線 ID，再將這些 ID 整理成 LED 對應清單，方便後續進行燈光控制與施工溝通。
-
 ---
 
-## 2. Dome_LED_LightingSimulation_BGModel.pde
+## 2. Dome_LED_LightingSimulation_withBackgroundModel
 
 ### 功能說明
 
@@ -127,74 +122,9 @@
 
 ---
 
-## 專案用途
-
-本專案主要用於 Dome 燈光裝置的前期設計與測試，包含：
-
-- LED 燈條數量與位置規劃
-- Dome 模型與燈光點位對位
-- 燈光動畫語言測試
-- 給老師、團隊或廠商理解燈光配置方式
-- 後續硬體控制與實際施工前的模擬參考
-
----
-
-## 硬體需求概念
-
-後續若要將模擬結果轉換為實體燈光裝置，LED 硬體建議支援：
-
-- 360 度全向發光
-- RGB 全彩控制
-- 單點控制 / 逐點控制
-- 每顆 LED 可獨立設定顏色與亮度
-
----
-
-## 檔案建議命名
-
-建議使用以下命名方式：
-
-```text
-Dome_LED_EdgeMapping.pde
-Dome_LED_LightingSimulation_BGModel.pde
-```
-
-若要加入計畫名稱與日期，也可以使用：
-
-```text
-NSTC_Dome_LED_EdgeMapping_20260506.pde
-NSTC_Dome_LED_LightingSimulation_BGModel_20260506.pde
-```
-
----
-
-## 建議資料夾結構
-
-```text
-Dome_LED_Project/
-├── README.md
-├── Dome_LED_EdgeMapping/
-│   ├── Dome_LED_EdgeMapping.pde
-│   └── data/
-│       └── dome2.obj
-├── Dome_LED_LightingSimulation_BGModel/
-│   ├── Dome_LED_LightingSimulation_BGModel.pde
-│   └── data/
-│       └── dome2.obj
-```
-
----
-
 ## 開發環境
 
 - Processing
 - P3D renderer
 - PeasyCam library
 - OBJ 3D model：`dome2.obj`
-
----
-
-## 備註
-
-此專案目前仍屬於模擬與測試階段，主要目標是建立 Dome 結構、LED 點位、燈光排列方式與動畫語言之間的關係。  
-後續可依照實際硬體規格，進一步串接 Arduino、ESP32、DMX、Art-Net 或其他 LED 控制系統。
