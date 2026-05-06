@@ -16,8 +16,7 @@ Dome_LED_RibbonPath_FX.pde
 
 ## 功能說明
 
-此程式會讀取 `dome3.obj` 模型，並從模型中抽取所有邊線資料，建立固定的 `edge id`。  
-接著程式會根據模型的 bounding box 估算 Dome 的球心與半徑，再生成一條沿著 Dome 球面與內部空間延伸的彩帶式 LED 路徑。
+此程式會讀取 `dome3.obj` 模型，並從模型中抽取所有邊線資料，建立固定的 `edge id`。接著程式會根據模型的 bounding box 估算 Dome 的球心與半徑，再生成一條沿著 Dome 球面與內部空間延伸的彩帶式 LED 路徑。
 
 彩帶路徑由兩個主要部分組成：
 
