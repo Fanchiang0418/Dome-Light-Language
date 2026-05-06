@@ -1,9 +1,8 @@
 # Dome LED Light Simulation
 
-本專案為 Dome 結構燈光模擬與 LED 控制邏輯測試工具，使用 Processing 製作。  
-測試 Dome 結構上的 LED 燈條配置、燈光排列方式、燈光動畫語言，以及模型邊線與 LED 點位的對應關係。
+Dome 結構燈光模擬與 LED 控制邏輯測試工具，使用 Processing 製作。  測試 Dome 結構上的 LED 燈條配置、燈光排列方式、燈光動畫語言，以及模型邊線與 LED 點位的對應關係。
 
-本專案目前包含兩支主要程式：
+目前包含兩支主要程式：
 
 1. `Dome_LED_Control`  
    用於讀取 Dome 3D 模型、顯示模型邊線 ID，並將 LED 點位對應到指定模型邊線上。
