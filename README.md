@@ -7,6 +7,6 @@ Google Drive
 
 GitHub
 - [期中總結]：2025_Dance_Dialogue
- - 備註：readme.md 檔案，內含步驟及需準備的資料
+  -- 備註：readme.md 檔案，內含步驟及需準備的資料
 
 
