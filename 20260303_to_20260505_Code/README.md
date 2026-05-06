@@ -409,7 +409,6 @@ playCeremonyTurn();
 | 引領 | YL |
 | 舞台 | WT |
 | 力量 | LL |
-| 無匹配 | AI |
 
 ---
 
