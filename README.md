@@ -5,6 +5,8 @@
 Google Drive
 [實作檔案] 檔案總整理：[實作連結](https://docs.google.com/document/d/13akpmVUNkJLWO78cIQ2tOAPk_lKGhlwTNGqt1iJp55Y/edit?tab=t.0)
 
-## GitHub 程式資料
+GitHub
+- [期中總結]：2025_Dance_Dialogue
+ - 備註：readme.md 檔案，內含步驟及需準備的資料
 
 
