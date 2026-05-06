@@ -1,25 +1,15 @@
 # Dome LED Ribbon Path FX
 
-本程式為 Dome 結構上的「彩帶式 LED 路徑」模擬工具，使用 Processing 製作。  
-主要用途是將 LED 點位沿著 Dome 球面生成一條彩帶路徑，並加入出口 S 曲線、pixel 編號顯示、點位隱藏、燈效切換與模型邊線 ID 輔助標記。
+Dome 結構上的「彩帶式 LED 路徑」模擬工具，使用 Processing 製作。將 LED 點位沿著 Dome 球面生成一條彩帶路徑，並加入出口 S 曲線、pixel 編號顯示、點位隱藏、燈效切換與模型邊線 ID 輔助標記。
 
-這支程式是前一版 `Dome_LED_SpiralMapping_FX.pde` 的延伸版本。  
-原本的核心是球面螺旋線，這一版進一步改成以 `ribbonPath` 作為主要路徑資料，讓 LED 更接近「彩帶」形式，而不是單純一條螺旋線。
+這支程式是前一版 `Dome_LED_SpiralMapping_FX.pde` 的延伸版本。原本的核心是球面螺旋線，這一版進一步改成以 `ribbonPath` 作為主要路徑資料，讓 LED 更接近「彩帶」形式。
 
 ---
 
-## 程式檔案
-
-建議檔名：
+## 主程式檔案
 
 ```text
 Dome_LED_RibbonPath_FX.pde
-```
-
-若要標示國科會計畫與日期，也可以命名為：
-
-```text
-NSTC_Dome_LED_RibbonPath_FX_20260506.pde
 ```
 
 ---
@@ -35,7 +25,7 @@ NSTC_Dome_LED_RibbonPath_FX_20260506.pde
    由下往上繞行 Dome，形成主要的 LED 彩帶軌跡。
 
 2. **出口 S 曲線**  
-   從螺旋入口延伸出一段 S 型曲線，模擬彩帶從 Dome 結構延伸到外部或地面的路徑。
+   從螺旋入口延伸出一段 S 型曲線，模擬彩帶從 Dome 結構延伸到外部路徑。
 
 程式會將彩帶路徑上的 LED 點位映射到亮度矩陣 `spiralBri[col][row]`，並透過不同燈效函式控制亮度變化。
 
@@ -311,36 +301,6 @@ updateSpiralFX();
 
 ---
 
-## 使用情境
-
-這支程式適合用於 Dome 裝置中「彩帶式 LED」的視覺模擬與燈效測試。  
-相較於單純的螺旋線，它更適合描述具有寬度、厚度、入口出口方向與特殊延伸路徑的 LED 造型。
-
-可應用於：
-
-- Dome 彩帶式 LED 路徑設計
-- 球面 / 球內 LED 走線模擬
-- 出口 S 曲線 LED 規劃
-- LED pixel 編號與定位
-- 隱藏或修正特定 pixel
-- 燈效方向與節奏測試
-- 實體施工前的視覺預覽
-- 與老師、學弟妹或廠商溝通燈光邏輯
-
----
-
-## 建議資料夾結構
-
-```text
-Dome_LED_RibbonPath_FX/
-├── README.md
-├── Dome_LED_RibbonPath_FX.pde
-└── data/
-    └── dome3.obj
-```
-
----
-
 ## 開發環境
 
 - Processing
@@ -349,17 +309,3 @@ Dome_LED_RibbonPath_FX/
 - OBJ 3D model：`dome3.obj`
 
 ---
-
-## 備註
-
-此程式目前主要作為 Dome 彩帶式 LED 路徑的模擬與視覺測試工具。  
-後續若要串接實體 LED 硬體，可將 `ribbonPath` 中的 pixel index 與實際 LED 編號對應，再將 `spiralBri[col][row]` 的亮度資料轉換為實體燈條控制訊號。
-
-可進一步串接：
-
-- Arduino
-- ESP32
-- DMX
-- Art-Net
-- WLED
-- 其他 addressable RGB LED 控制系統
