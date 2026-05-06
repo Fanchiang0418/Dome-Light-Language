@@ -85,7 +85,7 @@ import java.net.*;
 | 檔案 | 用途 |
 |---|---|
 | `dome3.obj` | Dome 3D 模型，用於邊線、節點、彩帶路徑與視覺預覽 |
-| `ceremony.json` | 文字資料，提供 AI says 內容並轉成摩斯燈光代碼 |
+| `ceremony.json` | 文字資料，提供 AI says 內容並轉成燈光的摩斯密碼 |
 
 ---
 
