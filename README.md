@@ -13,7 +13,7 @@
     - 備註：內含步驟及需準備的資料
 - [期中總結]：[Light-simulation](https://github.com/Fanchiang0418/Light-simulation/tree/main)
     - 備註：內含步驟及需準備的資料
-- [Dome 燈光排列與控制]：[Dome-Light-Language](https://github.com/Fanchiang0418/Dome-Light-Language/tree/main/20260303_to_20260505_Code)
+- [Dome 燈光排列與控制]：[Dome-Light-Language](https://github.com/Fanchiang0418/Dome-Light-Language/tree/main)
     - 備註：內含步驟及需準備的資料
 
 
