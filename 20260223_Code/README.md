@@ -90,8 +90,7 @@ computeBoundsFromEdges(allEdges);
 ArrayList<PVector> ribbonPath = new ArrayList<PVector>();
 ```
 
-`ribbonPath` 會儲存彩帶上的每一個 LED pixel 位置。  
-程式會先生成球內螺旋，再視需求加上出口 S 曲線。
+`ribbonPath` 會儲存彩帶上的每一個 LED pixel 位置。程式會先生成球內螺旋，再視需求加上出口 S 曲線。
 
 主要相關函式：
 
@@ -104,8 +103,7 @@ prependExitLineFrom(ribbonPath.get(0));
 
 ### 4. 球內螺旋路徑
 
-球內螺旋會沿著 Dome 高度由下往上繞行。  
-每個點會根據高度、半徑、角度與內外偏移量計算出 3D 座標。
+球內螺旋會沿著 Dome 高度由下往上繞行。每個點會根據高度、半徑、角度與內外偏移量計算出 3D 座標。
 
 重要參數：
 
@@ -125,8 +123,7 @@ prependExitLineFrom(ribbonPath.get(0));
 
 ### 5. 出口 S 曲線
 
-出口 S 曲線會從彩帶螺旋的入口端延伸出去，形成一段較自然的外部延伸路徑。  
-程式使用 Bezier 曲線與等距重取樣，讓出口線段的 pixel 間距更平均。
+出口 S 曲線會從彩帶螺旋的入口端延伸出去，形成一段較自然的外部延伸路徑。程式使用 Bezier 曲線與等距重取樣，讓出口線段的 pixel 間距更平均。
 
 主要相關函式：
 
