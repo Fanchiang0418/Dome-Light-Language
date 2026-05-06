@@ -1,4 +1,4 @@
-# Dome LED Light Simulation
+# Dome-Light-Language
 
 Dome 結構燈光模擬與 LED 控制邏輯測試工具，使用 Processing 製作。  測試 Dome 結構上的 LED 燈條配置、燈光排列方式、燈光動畫語言，以及模型邊線與 LED 點位的對應關係。
 
